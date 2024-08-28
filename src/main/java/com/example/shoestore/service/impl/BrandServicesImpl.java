@@ -26,7 +26,7 @@ public class BrandServicesImpl implements BrandServices{
 
     @Override
     public BrandDto createBrand(BrandDto BrandDto) {
-        Brand brand = BrandMapper.MapToBrand(BrandDto);
+        Brand brand = BrandMapper.mapToBrand(BrandDto);
         Brand savedBrand = BrandRepository.save(brand);
         return BrandMapper.MapToBrandDto(savedBrand);
     }

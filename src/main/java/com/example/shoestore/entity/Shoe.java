@@ -24,11 +24,11 @@ public class Shoe {
     @Column(name = "ShoeName", nullable = false)
     private String shoeName;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "BrandID")
     private Brand brand; // Tạo một lớp Brand để ánh xạ khóa ngoại
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "CategoryID")
     private Category category; // Tạo một lớp Category để ánh xạ khóa ngoại
 

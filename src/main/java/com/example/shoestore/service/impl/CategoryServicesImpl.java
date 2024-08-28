@@ -26,8 +26,8 @@ public class CategoryServicesImpl implements CategoryServices {
 
     @Override
     public CategoryDto createCategory(CategoryDto CategoryDto) {
-        Category category = CategoryMapper.MapToCategory(CategoryDto);
+        Category category = CategoryMapper.mapToCategory(CategoryDto);
         Category savedCategory = CategoryRepository.save(category);
-        return CategoryMapper.MapToCategoryDto(savedCategory);
+        return CategoryMapper.mapToCategoryDto(savedCategory);
     }
 }

@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -12,4 +14,6 @@ import lombok.Setter;
 public class CategoryDto {
     private int categoryId;
     private String categoryName;
+//    private Set<Integer> shoeIds;
+
 }
